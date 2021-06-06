@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>My Awesome Website</title>
+
+    <!-- attach our stylesheet -->
+    
+<style>
+/* resetting browser stuff */
+*     {
+  box-sizing: border-box;
+}
+html,
+body   {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body     {
+  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling our header */
+header   {
+  background: #222;
+  color: #FFF;
+  padding: 20px 30px;
+}
+
+/* logo */
+#logo         {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  width: 49%;
+}
+#logo img    {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#logo span   {
+  display: inline-block;
+}
+
+/* main navigation */
+nav     {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul   {
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a    {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+nav ul li a:hover   {
+  background: #444;
+}
+
+/* styling our footer */
+footer   {
+  background: #222;
+  color: #777;
+  padding: 40px;
+  text-align: center;
+}
+footer img   {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  margin: 0 auto 10px;
+}
+
+/* styling our main content */
+.hero           {
+  min-height: 800px;
+  text-align: center;
+  background-image: url('static/img/ab.jpg');
+  background-size: cover;
+}
+.hero-content   {
+  color: #FFF;
+  padding-top: 130px;
+}
+.hero-content h1   {
+  font-size: 100px;
+  margin: 0;
+}
+.hero-content p    {
+  font-size: 50px;
+}
+.hero-content a    {
+  display: inline-block;
+  color: #FFF;
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+/* basic site sections */
+.site-section   {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.site-section-secondary   {
+  background: #EFEFEF;
+}
+.site-section-inside   {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-header h2  {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #777;
+}
+
+/* feature boxes */
+.feature-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.feature-box img  {
+  margin-bottom: 12px;
+  width: 80px;
+}
+.feature-box h5   {
+  font-size: 20px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* testimonial boxes */
+.testimonial-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.testimonial-content   {
+  background: #FFF;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.testimonial-author           {
+
+}
+.testimonial-author img {
+  float: left;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.testimonial-author h5   {
+  font-size: 18px;
+  margin: 0;
+  padding-top:15px;
+}
+.testimonial-author span {
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+    <!-- the header -->
+    <header>
+
+        <!-- our main logo -->
+        
+        <!-- main navigation links -->
+        
+
+    </header>
+
+    <!-- the content -->
+    <main>
+
+        <!-- hero content -->
+        <div class="hero">
+            <!-- content for the hero -->
+            <div class="hero-content">
+                <h1 class="hero-title">Words fail Music Speaks</h1>
+                <p>Bored with lazy recommendations? </p><br><br><br><br><br>
+<iframe src="https://open.spotify.com/embed/artist/69GGBxA162lTqCwzJG5jLp" width="560" height="180" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<br><br><br><br><br><br><br><br><br><br><br>
+                <form action={{url_for("after")}} enctype=multipart/form-data method= post>
+<input type=file name=file1>
+                
+<input type=submit><br><br>
+<h5>Music genre for this is : {{final}}</h5>
+</br></br>
+</form>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <div class="site-section">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>Key Features</h2>
+            </div>
+
+            <div class="feature-box">
+                <img src="static/img/like.png" alt="Reduce Stress">
+                <h5>Reduces Stress</h5>
+                <p>Listening to music can decrease levels of the stress hormone, cortisol. A study showed that people’s immune systems were boosted when they actively participate.
+
+</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="static/img/faces.png" alt="Fun to Use">
+                <h5>Anti-Depression</h5>
+<p>Over 350 million people across the world suffer from depression and 90% of them also experience insomnia. Sleep research found that symptoms of depression decreased largely with those who listened to classical music.</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="static/img/heart.png" alt="Fun to Use">
+                <h5>Sound Sleep</h5>
+                <p>A study showed that students who listened to relaxing classical music for 45 minutes before bedtime slept significantly better than those who slept with an audiobook or listened to nothing at all.</p>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- testimonials section -->
+        <div class="site-section site-section-secondary">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>What the people say</h2>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Their service is by far the most accurate I've ever seen.
+                </div>
+                <div class="testimonial-author">
+                    <img src="static/img/pk.jfif" alt="Prateek">
+                    <h5>Prateek</h5>
+                    <span>Music Enthusiast</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    I feel grateful that music can be discovered and consumed while we are stuck at home.
+                </div>
+                <div class="testimonial-author">
+                    <img src="static/img/jo.jfif" alt="Jonita Gandhi">
+                    <h5>Jonita Gandhi</h5>
+                    <span>Singer/Composer</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Is there anything better than discovering your genre taste? Loved there work
+                </div>
+                <div class="testimonial-author">
+                    <img src="static/img/aj.jfif" alt="Anuv Jain">
+                    <h5>Anuv Jain</h5>
+                    <span>Indie Pop artist</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <!-- the footer -->
+    <footer>
+        <span><br>Styled & Designed by Nikunj; 2020-2021 </span>
+    </footer>
+
+</body>
+</html>
